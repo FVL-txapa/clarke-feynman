@@ -17,9 +17,9 @@ float doTest(const MNISTReader& mntest, const Tensor<float>& weights, float bias
     Tensor img(28,28);
     mntest.pushImage(n, img);
 
-    float score = (img.dot(weights).sum()(0,0)) + bias; // the calculation
+    float score = (img.dot(weights).sum()(0,0)) + bias; // calculo
 
-    int predict = score > 0 ? 7 : 3;                  // the verdict
+    int predict = score > 0 ? 7 : 3;                  // prediccion
 
     if(sqw)
       sqw->addValue({{"label", label}, {"res", score}, {"verdict", predict}});
@@ -42,7 +42,7 @@ int main()
   MNISTReader mn("gzip/emnist-digits-train-images-idx3-ubyte.gz", "gzip/emnist-digits-train-labels-idx1-ubyte.gz");
   MNISTReader mntest("gzip/emnist-digits-test-images-idx3-ubyte.gz", "gzip/emnist-digits-test-labels-idx1-ubyte.gz");
 
-  cout << "Have "<<mn.num() << " training images and " << mntest.num() << " validation images." <<endl;
+  cout << "Tengo "<<mn.num() << " imagenes de entrenamiento y " << mntest.num() << " de validacion." <<endl;
 
   Tensor weights(28,28);
   weights.randomize(1.0/sqrt(28*28));
@@ -71,7 +71,7 @@ int main()
 
     Tensor img(28,28);
     mn.pushImage(n, img);
-    float res = (img.dot(weights).sum()(0,0)) + bias; // the calculation
+    float res = (img.dot(weights).sum()(0,0)) + bias; // calculo
     if(count == 25001) {
       auto prod = img.dot(weights);
       saveTensor(img, "random-image.png", 252, true);
