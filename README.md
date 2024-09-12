@@ -1,3 +1,9 @@
+# Box, Clarke y Feynman
+Este proyecto es una introducción desde cero al aprendizaje automático (machine learning) moderno.
+Parte de la idea de que ya existen muchos tutoriales, de todos los pelajes, buenos y no tanto, pero
+este apunta a explicar qué es lo que realmente sucede a través de desarrollar una demo que sea de
+verdad útil en datos del mundo real. Se inspira en el 'construccionismo' como modo de aprendizaje,
+un marco metodológico desarrollado por [Seymour Papert](https://en.wikipedia.org/wiki/Seymour_Papert)
 # hello-dl
 bert@hubertnet.nl - I post about this project on Mastodon as [@bert_hubert@fosstodon.org](https://fosstodon.org/@bert_hubert). A series of associated blog posts is [here](https://berthub.eu/articles/posts/hello-deep-learning/).
 
